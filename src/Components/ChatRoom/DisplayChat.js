@@ -4,6 +4,7 @@ import React, { useContext } from 'react'
 import { db } from '../../firebase/config'
 import { useEffect } from 'react'
 import Message from './Message'
+import './index.css'
 import { AppContext } from '../../Context/AppProvider'
 const DisplayChat = () => {
   // useEffect(() => {

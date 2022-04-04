@@ -38,8 +38,11 @@ a.ant-typography{
 .room-member{
     display: flex;
     align-items: center;
+    /* margin-right: 20px; */
 }
-
+.ant-avatar-group{
+    margin: 0 20px 0 10px;
+}
 .display-chat-content{
     height: calc(100% - 56px);
     display: flex;
