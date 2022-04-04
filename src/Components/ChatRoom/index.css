@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+    color: white;
+}
+a.ant-typography{
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.display-chat{
+    height: 100vh;
+
+}
+.display-chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    height: 56px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.room-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.room-info p{    
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+.room-info span{
+    font-size: 12px;
+}
+.room-member{
+    display: flex;
+    align-items: center;
+}
+
+.display-chat-content{
+    height: calc(100% - 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.message-list{
+    padding: 20px 30px;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+.message-info{
+    display: flex;
+    align-items: flex-start;
+}
+.message-info h4{
+    margin: 0 10px;
+}
+.message-info p{
+    margin-left: 10px;
+    font-size: 13px;
+    color: rgba(0,0,0,0.3);
+}
+.message-content{
+    margin-left: 40px;
+}
+.ant-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.ant-form-item{
+    flex: 1;
+    margin-bottom: 0;
+    margin: 0 10px;
+}
+.ant-form-item-control-input{
+    border-radius: 5px;
+}
