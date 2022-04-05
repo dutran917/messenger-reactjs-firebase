@@ -13,7 +13,7 @@ const DisplayChat = () => {
 
   const { selectedRoom, selectedRoomId, members, setInviteVisible } = useContext(AppContext)
   const user = useContext(AuthContext)
-  const [msg,setMsg] = useState('')
+  const [msg, setMsg] = useState('')
   const [form] = Form.useForm()
   const handleOnchange = (e) => {
     setMsg(e.target.value)
@@ -21,7 +21,7 @@ const DisplayChat = () => {
   const messageRef = useRef(null)
   const inputRef = useRef(null)
   const handleSubmit = () => {
-    addDocument('messages',{
+    addDocument('messages', {
       uid: user.uid,
       mess: msg,
       avt: user.photoURL,
@@ -36,14 +36,14 @@ const DisplayChat = () => {
       })
     }
   }
-  const roomCondition = useMemo(()=>{
+  const roomCondition = useMemo(() => {
     return {
       fieldName: 'roomId',
       operator: '==',
       compareVal: selectedRoomId
     }
-  },[selectedRoomId])
-  const messages = useFirestore('messages',roomCondition)
+  }, [selectedRoomId])
+  const messages = useFirestore('messages', roomCondition)
   useEffect(() => {
     if (messageRef?.current) {
       messageRef.current.scrollTop =
@@ -76,19 +76,19 @@ const DisplayChat = () => {
       <div className='display-chat-content' id='chat'>
         <div className='message-list' ref={messageRef}>
           {
-            messages.map((item)=>(
+            messages.map((item) => (
               <Message text={item.mess} avt={item.avt} name={item.name} key={item.id} userId={item.uid} time={item.createAt}></Message>
             ))
           }
         </div>
         <Form form={form}>
           <Form.Item name='mess'>
-            <Input 
-            autoComplete='off' 
-            placeholder='Type your message...'
-            onPressEnter={handleSubmit}
-            onChange={handleOnchange}
-            ref={inputRef}
+            <Input
+              autoComplete='off'
+              placeholder='Type your message...'
+              onPressEnter={handleSubmit}
+              onChange={handleOnchange}
+              ref={inputRef}
             ></Input>
           </Form.Item>
           <Button type='primary' onClick={handleSubmit}>Send</Button>

@@ -5,7 +5,7 @@ import { AuthContext } from '../../Context/AuthProvider'
 import { AppContext } from '../../Context/AppProvider'
 const UserInfo = () => {
   const { displayName, photoURL } = useContext(AuthContext)
-  const {clearLogout} = useContext(AppContext)
+  const { clearLogout } = useContext(AppContext)
   const logout = () => {
     auth.signOut()
     clearLogout()
