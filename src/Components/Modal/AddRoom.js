@@ -25,7 +25,7 @@ const AddRoom = () => {
             setNoti(null)
         }
         else{
-            setNoti("Room's name cant be empty")
+            setNoti("Room's name can not be empty")
         }
     }
     const handleCancel = () => {
