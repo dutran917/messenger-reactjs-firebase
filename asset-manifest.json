@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/messenger-reactjs-firebase/static/css/main.224ad68c.css",
+    "main.js": "/messenger-reactjs-firebase/static/js/main.6fbd6e24.js",
+    "static/js/787.d3828a64.chunk.js": "/messenger-reactjs-firebase/static/js/787.d3828a64.chunk.js",
+    "index.html": "/messenger-reactjs-firebase/index.html",
+    "main.224ad68c.css.map": "/messenger-reactjs-firebase/static/css/main.224ad68c.css.map",
+    "main.6fbd6e24.js.map": "/messenger-reactjs-firebase/static/js/main.6fbd6e24.js.map",
+    "787.d3828a64.chunk.js.map": "/messenger-reactjs-firebase/static/js/787.d3828a64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.224ad68c.css",
+    "static/js/main.6fbd6e24.js"
+  ]
+}
