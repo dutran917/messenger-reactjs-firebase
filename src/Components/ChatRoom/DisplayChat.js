@@ -21,15 +21,18 @@ const DisplayChat = () => {
   const messageRef = useRef(null)
   const inputRef = useRef(null)
   const handleSubmit = () => {
-    addDocument('messages', {
-      uid: user.uid,
-      mess: msg,
-      avt: user.photoURL,
-      name: user.displayName,
-      roomId: selectedRoomId,
-      createAt: firebase.firestore.FieldValue.serverTimestamp()
-    })
+    if(msg.length > 0) {
+      addDocument('messages', {
+        uid: user.uid,
+        mess: msg,
+        avt: user.photoURL,
+        name: user.displayName,
+        roomId: selectedRoomId,
+        createAt: firebase.firestore.FieldValue.serverTimestamp()
+      })
+    }
     form.resetFields(['mess'])
+    setMsg('')
     if (inputRef?.current) {
       setTimeout(() => {
         inputRef.current.focus()
