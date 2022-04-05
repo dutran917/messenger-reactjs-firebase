@@ -16,8 +16,7 @@ const AddRoom = () => {
             addDocument('rooms', {
                 description: des,
                 name: name,
-                members: [user.uid],
-                message: []
+                members: [user.uid]
             })
             setAddRoomVisible(false)
             setName('')

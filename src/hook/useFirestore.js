@@ -7,7 +7,6 @@ const useFirestore = (collection, condition) => {
       let collectionRef = db.collection(collection).orderBy('createAt');
       if (condition) {
         if (!condition.compareVal || !condition.compareVal.length) {
-          // reset documents data
           setDocuments([]);
           return;
         }

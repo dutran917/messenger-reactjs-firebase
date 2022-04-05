@@ -14,9 +14,6 @@ const AddMember = () => {
       setValue(null);
     };
   }, []);
-  useEffect(() => {
-    console.log(value);
-  }, [value]);
   const handleOk = () => {
     const roomRef = db.collection("rooms").doc(selectedRoomId);
     setValue(null);
@@ -25,7 +22,6 @@ const AddMember = () => {
     });
     form.resetFields();
     setInviteVisible(false);
-    // window.location.reload();
   };
   const handleCancel = () => {
     setValue(null);
@@ -39,16 +35,13 @@ const AddMember = () => {
     const loadUser = useMemo(() => {
       const fetchData = (value) => {
         setOptions([]);
-        // setValue(null)
+        setValue(null)
         searchUser(value).then((data) => {
           setOptions(data);
         });
       };
       return debounce(fetchData, 300);
     }, [searchUser]);
-    useEffect(() => {
-      console.log(options);
-    }, [options]);
     return (
       <Select
         labelInValue

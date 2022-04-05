@@ -18,7 +18,7 @@ const AppProvider = ({ children }) => {
     const rooms = useFirestore('rooms', roomCondition)
     const selectedRoom = useMemo(()=>
         rooms.find((room) => room.id === selectedRoomId) || {}
-    ,[selectedRoomId])
+    ,[rooms,selectedRoomId])
 
     const userCondition = useMemo(() => {
         return {
@@ -28,7 +28,6 @@ const AppProvider = ({ children }) => {
         }
 
     }, [selectedRoom.members])
-
     const members = useFirestore('users', userCondition)
     const clearLogout = () => {
         setSelectedRoomId('')

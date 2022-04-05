@@ -3,7 +3,6 @@ import { auth } from '../firebase/config'
 import { useContext, useEffect, useState } from 'react'
 import { createContext } from 'react'
 import { Spin } from 'antd'
-import { AppContext } from './AppProvider'
 export const AuthContext = createContext()
 const AuthProvider = ({ children }) => {
     const history = useHistory()
