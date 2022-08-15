@@ -10,6 +10,13 @@ a.ant-typography{
     margin-bottom: 10px;
 }
 
+/* sidebar */
+.sidebar{
+    background: rgba(14, 13, 13, 0.873);
+    height: 100vh;
+}
+
+
 .display-chat{
     height: 100vh;
 

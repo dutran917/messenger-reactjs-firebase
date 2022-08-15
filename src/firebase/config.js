@@ -1,21 +1,20 @@
-import firebase from "firebase";
-import 'firebase/analytics'
-import 'firebase/auth'
-import 'firebase/firestore'
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBG3Upp7-IGpf9BY8cq6VVnNaHZDjRc8FM",
-  authDomain: "chat-app-f37f0.firebaseapp.com",
-  projectId: "chat-app-f37f0",
-  storageBucket: "chat-app-f37f0.appspot.com",
-  messagingSenderId: "632588444334",
-  appId: "1:632588444334:web:66e1070d880efef5f3033f",
-  measurementId: "G-0545R51Q78"
-}
-firebase.initializeApp(firebaseConfig)
-firebase.analytics()
+  apiKey: "AIzaSyBEQuOhGu-QVVCEujIf1iXilJpQVZsUtPA",
+  authDomain: "mess-6c8b6.firebaseapp.com",
+  projectId: "mess-6c8b6",
+  storageBucket: "mess-6c8b6.appspot.com",
+  messagingSenderId: "1079694548124",
+  appId: "1:1079694548124:web:270a48c9082b87587be159",
+  measurementId: "G-N8FDH6G2WH",
+};
 
-const auth = firebase.auth()
-const db = firebase.firestore()
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
 
-export { auth, db }
-export default firebase
+export { auth, db };
+export default firebase;
